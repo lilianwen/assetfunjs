@@ -1,5 +1,5 @@
 import assert from "assert";
-import {Apis, ChainConfig} from "bitsharesjs-ws";
+import {Apis, ChainConfig} from "fidchainjs-ws";
 import { FetchChain, ChainStore } from "../../lib";
 
 var coreAsset;
