@@ -19,8 +19,8 @@
     "postbuild": "npm run build-es",
     "build:watch": "babel lib -d dist --watch",
     "prebrowserify": "rm -rf ./build/*",
-    "browserify": "browserify --full-paths dist/browser.js --standalone bitshares_js -o build/bitsharesjs.js -d",
-    "postbrowserify": "uglifyjs --compress --mangle --sequences --drop_console --output build/bitsharesjs.min.js -- build/bitsharesjs.js",
+    "browserify": "browserify --full-paths dist/browser.js --standalone bitshares_js -o build/fidchainjs.js -d",
+    "postbrowserify": "uglifyjs --compress --mangle --sequences --drop_console --output build/fidchainjs.min.js -- build/fidchainjs.js",
     "prepublish": "npm run build",
     "doc": "esdoc -c esdoc.json",
     "example:transfer": "babel-node examples/transfer",
@@ -39,7 +39,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bitshares/bitsharesjs/issues"
+    "url": "https://github.com/lilianwen/fidchainjs/issues"
   },
   "engines": {
     "node": ">= 6.0.0"
