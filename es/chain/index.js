@@ -8,8 +8,12 @@ import ChainValidation from "./src/ChainValidation";
 import EmitterInstance from "./src/EmitterInstance";
 import Login from "./src/AccountLogin";
 
+//[lilianwen add 2017-10-21]
+import { GetSubjectsByName } from "./src/SubjectQuery";
+//[end]
+
 var FetchChainObjects = ChainStore.FetchChainObjects,
     FetchChain = ChainStore.FetchChain;
 
 
-export { ChainStore, TransactionBuilder, FetchChainObjects, ChainTypes, ObjectId, NumberUtils, TransactionHelper, ChainValidation, FetchChain, Login };
+export { ChainStore, TransactionBuilder, FetchChainObjects, ChainTypes, ObjectId, NumberUtils, TransactionHelper, ChainValidation, FetchChain, Login, GetSubjectsByName };

@@ -1,7 +1,7 @@
 "use strict";
 
 exports.__esModule = true;
-exports.Login = exports.FetchChain = exports.ChainValidation = exports.TransactionHelper = exports.NumberUtils = exports.ObjectId = exports.EmitterInstance = exports.ChainTypes = exports.FetchChainObjects = exports.TransactionBuilder = exports.ChainStore = exports.key = exports.hash = exports.brainKey = exports.Signature = exports.PublicKey = exports.PrivateKey = exports.Aes = exports.Address = exports.SerializerValidation = exports.template = exports.ops = exports.types = exports.fp = exports.Serializer = undefined;
+exports.GetSubjectsByName = exports.Login = exports.FetchChain = exports.ChainValidation = exports.TransactionHelper = exports.NumberUtils = exports.ObjectId = exports.EmitterInstance = exports.ChainTypes = exports.FetchChainObjects = exports.TransactionBuilder = exports.ChainStore = exports.key = exports.hash = exports.brainKey = exports.Signature = exports.PublicKey = exports.PrivateKey = exports.Aes = exports.Address = exports.SerializerValidation = exports.template = exports.ops = exports.types = exports.fp = exports.Serializer = undefined;
 
 var _serializer = require("./serializer/src/serializer");
 
@@ -95,6 +95,8 @@ var _AccountLogin = require("./chain/src/AccountLogin");
 
 var _AccountLogin2 = _interopRequireDefault(_AccountLogin);
 
+var _SubjectQuery = require("./chain/src/SubjectQuery");
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -120,6 +122,11 @@ exports.key = _KeyUtils2.default;
 
 /* Chain */
 
+
+//[lilianwen add 2017-10-21]
+
+//[end]
+
 var FetchChainObjects = _ChainStore2.default.FetchChainObjects,
     FetchChain = _ChainStore2.default.FetchChain;
 exports.ChainStore = _ChainStore2.default;
@@ -133,3 +140,4 @@ exports.TransactionHelper = _TransactionHelper2.default;
 exports.ChainValidation = _ChainValidation2.default;
 exports.FetchChain = FetchChain;
 exports.Login = _AccountLogin2.default;
+exports.GetSubjectsByName = _SubjectQuery.GetSubjectsByName;

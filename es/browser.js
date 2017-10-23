@@ -5,5 +5,6 @@ module.exports = {
     key: require("./ecc/src/KeyUtils"),
     TransactionBuilder: require("./chain/src/TransactionBuilder"),
     Login: require("./chain/src/AccountLogin"),
-    bitshares_ws: require("fidchainjs-ws")
+    SubjectQuery: require("./chain/src/SubjectQuery"),
+    fidchain_ws: require("fidchainjs-ws")
 };

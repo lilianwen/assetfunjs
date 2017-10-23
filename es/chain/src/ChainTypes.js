@@ -22,7 +22,12 @@ ChainTypes.object_type = {
     withdraw_permission: 12,
     vesting_balance: 13,
     worker: 14,
-    balance: 15
+    balance: 15,
+    subject: 16,
+    subject_vote: 17,
+    subject_event: 18,
+    coin: 19,
+    module_cfg: 20
 };
 
 ChainTypes.impl_object_type = {
@@ -39,7 +44,11 @@ ChainTypes.impl_object_type = {
     blinded_balance: 10,
     chain_property: 11,
     witness_schedule: 12,
-    budget_record: 13
+    budget_record: 13,
+    special_authority: 14,
+    buyback: 15,
+    fba_accumulator: 16,
+    subject_statistics: 17
 };
 
 ChainTypes.vote_type = {
@@ -92,7 +101,12 @@ ChainTypes.operations = {
     blind_transfer: 40,
     transfer_from_blind: 41,
     asset_settle_cancel: 42,
-    asset_claim_fees: 43
+    asset_claim_fees: 43,
+    fba_distribute: 44,
+    subject_publish: 45,
+    subject_vote: 46,
+    subject_event: 47,
+    coin_feed_price: 48
 };
 
 export default ChainTypes;

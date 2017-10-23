@@ -1,7 +1,7 @@
 "use strict";
 
 exports.__esModule = true;
-exports.Login = exports.FetchChain = exports.ChainValidation = exports.TransactionHelper = exports.NumberUtils = exports.ObjectId = exports.ChainTypes = exports.FetchChainObjects = exports.TransactionBuilder = exports.ChainStore = undefined;
+exports.GetSubjectsByName = exports.Login = exports.FetchChain = exports.ChainValidation = exports.TransactionHelper = exports.NumberUtils = exports.ObjectId = exports.ChainTypes = exports.FetchChainObjects = exports.TransactionBuilder = exports.ChainStore = undefined;
 
 var _ChainStore = require("./src/ChainStore");
 
@@ -39,10 +39,17 @@ var _AccountLogin = require("./src/AccountLogin");
 
 var _AccountLogin2 = _interopRequireDefault(_AccountLogin);
 
+var _SubjectQuery = require("./src/SubjectQuery");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//[end]
 
 var FetchChainObjects = _ChainStore2.default.FetchChainObjects,
     FetchChain = _ChainStore2.default.FetchChain;
+
+//[lilianwen add 2017-10-21]
+
 exports.ChainStore = _ChainStore2.default;
 exports.TransactionBuilder = _TransactionBuilder2.default;
 exports.FetchChainObjects = FetchChainObjects;
@@ -53,3 +60,4 @@ exports.TransactionHelper = _TransactionHelper2.default;
 exports.ChainValidation = _ChainValidation2.default;
 exports.FetchChain = FetchChain;
 exports.Login = _AccountLogin2.default;
+exports.GetSubjectsByName = _SubjectQuery.GetSubjectsByName;

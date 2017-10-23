@@ -1355,6 +1355,31 @@ var ChainStore = function () {
         });
     };
 
+    //[lilianwen add 2017-10-20]
+
+
+    ChainStore.prototype.queryForSubjectPublish = function queryForSubjectPublish(pretictionEndTime) {
+        _fidchainjsWs.Apis.instance().db_api().exec("get_global_properties").then(function (chainGlobalProperties) {
+            var vote_duration_percent = chainGlobalProperties.parameter.subject_profile.vote_duration_percent;
+            _fidchainjsWs.Apis.instance().db_api().exec("get_dynamic_global_properties").then(function (chainDynamicProperties) {
+                var result = {};
+                var current = timeStringToDate(chainDynamicProperties.time);
+                var deltTime = (timeStringToDate(pretictionEndTime).getTime() - current.getTime()) / 1000; //unit second
+                var predictionInterval = deltTime >= 7200 ? pretictionEndTime : current + 7200;
+                result.createTime = current;
+                result.predictionInterval = predictionInterval;
+                result.voteBeginTime = result.createTime;
+                result.voteEndTime = getLocalTime(current.getTime() / 1000 + predictionInterval * vote_duration_percent / 10000);
+                result.settleTime = getLocalTime(current.getTime() / 1000 + 24 * 60 * 60); // fixed: yymmdd 12:00, delay: 120min
+
+                //calculate fee
+                //result.create_fee
+                return result;
+            });
+        });
+    };
+    //[end]
+
     return ChainStore;
 }();
 
@@ -1419,6 +1444,12 @@ function timeStringToDate(time_string) {
     time_string = time_string + "Z";
     return new Date(time_string);
 }
+
+//[lilianwen add 2017-10-20]
+function getLocalTime(nS) {
+    return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ');
+}
+//[end]
 
 exports.default = chain_store;
 module.exports = exports["default"];
