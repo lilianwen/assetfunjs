@@ -2,12 +2,12 @@ import { Apis } from "fidchainjs-ws";
 
 function GetSubjectById(Id) {
     return new Promise(function (resolve, reject) {
-        Apis.instance().db_api().exec("get_subject_by_id", [id]).then(function (subjects) {
+        Apis.instance().db_api().exec("get_subject_by_id", [Id]).then(function (subjects) {
             if (subjects) {
                 console.log(subjects);
                 resolve(subjects);
             } else {
-                reject(new Error("there is no subject whose name is " + name));
+                reject(new Error("there is no subject whose id is " + Id));
             }
         });
     });
@@ -153,4 +153,4 @@ function GetSubjectEventsByOperator(startId, limit, operatorId) {
     });
 }
 
-export { GetSubjectsById, GetSubjectsByName, GetSubjectsOrderById, GetSubjectsByStatus, GetSubjectsByCreator, GetSubjectsByCreateTime, GetSubjectsByVoteEndTime, GetSubjectVotesByVoter, GetSubjectVotesBySubjectId, GetSubjectEventsBySubjectId, GetSubjectEventsByOperator };
+export { GetSubjectById, GetSubjectsByName, GetSubjectsOrderById, GetSubjectsByStatus, GetSubjectsByCreator, GetSubjectsByCreateTime, GetSubjectsByVoteEndTime, GetSubjectVotesByVoter, GetSubjectVotesBySubjectId, GetSubjectEventsBySubjectId, GetSubjectEventsByOperator };

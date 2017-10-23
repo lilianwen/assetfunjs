@@ -1,7 +1,7 @@
 "use strict";
 
 exports.__esModule = true;
-exports.GetSubjectsByName = exports.Login = exports.FetchChain = exports.ChainValidation = exports.TransactionHelper = exports.NumberUtils = exports.ObjectId = exports.EmitterInstance = exports.ChainTypes = exports.FetchChainObjects = exports.TransactionBuilder = exports.ChainStore = exports.key = exports.hash = exports.brainKey = exports.Signature = exports.PublicKey = exports.PrivateKey = exports.Aes = exports.Address = exports.SerializerValidation = exports.template = exports.ops = exports.types = exports.fp = exports.Serializer = undefined;
+exports.GetSubjectEventsByOperator = exports.GetSubjectEventsBySubjectId = exports.GetSubjectVotesBySubjectId = exports.GetSubjectVotesByVoter = exports.GetSubjectsByVoteEndTime = exports.GetSubjectsByCreateTime = exports.GetSubjectsByCreator = exports.GetSubjectsByStatus = exports.GetSubjectsOrderById = exports.GetSubjectsByName = exports.GetSubjectById = exports.Login = exports.FetchChain = exports.ChainValidation = exports.TransactionHelper = exports.NumberUtils = exports.ObjectId = exports.EmitterInstance = exports.ChainTypes = exports.FetchChainObjects = exports.TransactionBuilder = exports.ChainStore = exports.key = exports.hash = exports.brainKey = exports.Signature = exports.PublicKey = exports.PrivateKey = exports.Aes = exports.Address = exports.SerializerValidation = exports.template = exports.ops = exports.types = exports.fp = exports.Serializer = undefined;
 
 var _serializer = require("./serializer/src/serializer");
 
@@ -140,4 +140,14 @@ exports.TransactionHelper = _TransactionHelper2.default;
 exports.ChainValidation = _ChainValidation2.default;
 exports.FetchChain = FetchChain;
 exports.Login = _AccountLogin2.default;
+exports.GetSubjectById = _SubjectQuery.GetSubjectById;
 exports.GetSubjectsByName = _SubjectQuery.GetSubjectsByName;
+exports.GetSubjectsOrderById = _SubjectQuery.GetSubjectsOrderById;
+exports.GetSubjectsByStatus = _SubjectQuery.GetSubjectsByStatus;
+exports.GetSubjectsByCreator = _SubjectQuery.GetSubjectsByCreator;
+exports.GetSubjectsByCreateTime = _SubjectQuery.GetSubjectsByCreateTime;
+exports.GetSubjectsByVoteEndTime = _SubjectQuery.GetSubjectsByVoteEndTime;
+exports.GetSubjectVotesByVoter = _SubjectQuery.GetSubjectVotesByVoter;
+exports.GetSubjectVotesBySubjectId = _SubjectQuery.GetSubjectVotesBySubjectId;
+exports.GetSubjectEventsBySubjectId = _SubjectQuery.GetSubjectEventsBySubjectId;
+exports.GetSubjectEventsByOperator = _SubjectQuery.GetSubjectEventsByOperator;

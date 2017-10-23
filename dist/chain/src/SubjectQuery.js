@@ -1,18 +1,18 @@
 "use strict";
 
 exports.__esModule = true;
-exports.GetSubjectEventsByOperator = exports.GetSubjectEventsBySubjectId = exports.GetSubjectVotesBySubjectId = exports.GetSubjectVotesByVoter = exports.GetSubjectsByVoteEndTime = exports.GetSubjectsByCreateTime = exports.GetSubjectsByCreator = exports.GetSubjectsByStatus = exports.GetSubjectsOrderById = exports.GetSubjectsByName = exports.GetSubjectsById = undefined;
+exports.GetSubjectEventsByOperator = exports.GetSubjectEventsBySubjectId = exports.GetSubjectVotesBySubjectId = exports.GetSubjectVotesByVoter = exports.GetSubjectsByVoteEndTime = exports.GetSubjectsByCreateTime = exports.GetSubjectsByCreator = exports.GetSubjectsByStatus = exports.GetSubjectsOrderById = exports.GetSubjectsByName = exports.GetSubjectById = undefined;
 
 var _fidchainjsWs = require("fidchainjs-ws");
 
 function GetSubjectById(Id) {
     return new Promise(function (resolve, reject) {
-        _fidchainjsWs.Apis.instance().db_api().exec("get_subject_by_id", [id]).then(function (subjects) {
+        _fidchainjsWs.Apis.instance().db_api().exec("get_subject_by_id", [Id]).then(function (subjects) {
             if (subjects) {
                 console.log(subjects);
                 resolve(subjects);
             } else {
-                reject(new Error("there is no subject whose name is " + name));
+                reject(new Error("there is no subject whose id is " + Id));
             }
         });
     });
@@ -158,7 +158,7 @@ function GetSubjectEventsByOperator(startId, limit, operatorId) {
     });
 }
 
-exports.GetSubjectsById = GetSubjectsById;
+exports.GetSubjectById = GetSubjectById;
 exports.GetSubjectsByName = GetSubjectsByName;
 exports.GetSubjectsOrderById = GetSubjectsOrderById;
 exports.GetSubjectsByStatus = GetSubjectsByStatus;
