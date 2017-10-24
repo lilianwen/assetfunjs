@@ -89,7 +89,7 @@ function GetSubjectsByCreateTime(startId, limit, startTime, endTime) {
 
 function GetSubjectsByVoteEndTime(startId, limit, startTime, endTime) {
     return new Promise(function (resolve, reject) {
-        _fidchainjsWs.Apis.instance().db_api().exec("get_subjects_by_vote_end_time", [1, 10, "2018-01-13T19:46:04", "2019-01-13T19:46:04"]).then(function (subjects) {
+        _fidchainjsWs.Apis.instance().db_api().exec("get_subjects_by_vote_end_time", [startId, limit, startTime, endTime]).then(function (subjects) {
             if (subjects.length > 0) {
                 console.log(subjects);
                 console.log(subjects.length);
