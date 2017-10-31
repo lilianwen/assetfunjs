@@ -1,7 +1,7 @@
 "use strict";
 
 exports.__esModule = true;
-exports.MyGetSubjectsOrderByVoteEndTime = exports.MarketGetSubjectsOrderByVoteEndTime = exports.FrontPageGetSubjectsOrderByVoteEndTime = exports.GetSubjectEventsByOperator = exports.GetSubjectEventsBySubjectId = exports.GetSubjectVotesBySubjectId = exports.GetSubjectVotesByVoter = exports.GetSubjectsByVoteEndTime = exports.GetSubjectsByCreateTime = exports.GetSubjectsByCreator = exports.GetSubjectsByStatus = exports.GetSubjectsOrderById = exports.GetSubjectsByName = exports.GetSubjectById = exports.Login = exports.FetchChain = exports.ChainValidation = exports.TransactionHelper = exports.NumberUtils = exports.ObjectId = exports.ChainTypes = exports.FetchChainObjects = exports.TransactionBuilder = exports.ChainStore = undefined;
+exports.MyGetSubjects = exports.MarketGetSubjects = exports.FrontPageGetSubjects = exports.GetSubjectEventsByOperator = exports.GetSubjectEventsBySubjectId = exports.GetSubjectVotesBySubjectId = exports.GetSubjectVotesByVoter = exports.GetSubjectsByVoteEndTime = exports.GetSubjectsByCreateTime = exports.GetSubjectsByCreator = exports.GetSubjectsByStatus = exports.GetSubjectsOrderById = exports.GetSubjectsByName = exports.GetSubjectById = exports.Login = exports.FetchChain = exports.ChainValidation = exports.TransactionHelper = exports.NumberUtils = exports.ObjectId = exports.ChainTypes = exports.FetchChainObjects = exports.TransactionBuilder = exports.ChainStore = undefined;
 
 var _ChainStore = require("./src/ChainStore");
 
@@ -71,6 +71,6 @@ exports.GetSubjectVotesByVoter = _SubjectQuery.GetSubjectVotesByVoter;
 exports.GetSubjectVotesBySubjectId = _SubjectQuery.GetSubjectVotesBySubjectId;
 exports.GetSubjectEventsBySubjectId = _SubjectQuery.GetSubjectEventsBySubjectId;
 exports.GetSubjectEventsByOperator = _SubjectQuery.GetSubjectEventsByOperator;
-exports.FrontPageGetSubjectsOrderByVoteEndTime = _SubjectQuery.FrontPageGetSubjectsOrderByVoteEndTime;
-exports.MarketGetSubjectsOrderByVoteEndTime = _SubjectQuery.MarketGetSubjectsOrderByVoteEndTime;
-exports.MyGetSubjectsOrderByVoteEndTime = _SubjectQuery.MyGetSubjectsOrderByVoteEndTime;
+exports.FrontPageGetSubjects = _SubjectQuery.FrontPageGetSubjects;
+exports.MarketGetSubjects = _SubjectQuery.MarketGetSubjects;
+exports.MyGetSubjects = _SubjectQuery.MyGetSubjects;

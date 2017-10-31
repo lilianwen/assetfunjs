@@ -6,8 +6,7 @@ import {GetSubjectById, GetSubjectsByName, GetSubjectsOrderById,
     GetSubjectsByStatus, GetSubjectsByCreator, GetSubjectsByCreateTime, 
     GetSubjectsByVoteEndTime, GetSubjectVotesByVoter, GetSubjectVotesBySubjectId, 
     GetSubjectEventsBySubjectId, GetSubjectEventsByOperator,
-    FrontPageGetSubjectsOrderByVoteEndTime,MarketGetSubjectsOrderByVoteEndTime,
-    MyGetSubjectsOrderByVoteEndTime } from "../../lib"
+    FrontPageGetSubjects,MarketGetSubjects,MyGetSubjects } from "../../lib"
 
 describe("SubjectQuery functions test", () => {
 
@@ -111,9 +110,9 @@ describe("SubjectQuery functions test", () => {
         })
     })
     
-    it("Front page get subjects by vote end time", function(){
+    it("Front page get subjects", function(){
         return new Promise(function(resolve, reject){
-            FrontPageGetSubjectsOrderByVoteEndTime({"start":1,"limit":100,"direction":1,"quote":"BTC","status":"create_status","account_name_or_id":"test2"}).then(function(subjects){
+            FrontPageGetSubjects({"start":1,"limit":100,"direction":1,"order_by":"vote_end_time","quote":"BTC","status":"create_status","account_name_or_id":"test2"}).then(function(subjects){
               console.log(subjects);
                 if (subjects) {
                   resolve()
@@ -126,7 +125,7 @@ describe("SubjectQuery functions test", () => {
 
     it("Market get subjects by vote end time", function(){
         return new Promise(function(resolve, reject){
-            MarketGetSubjectsOrderByVoteEndTime({"start":1,"limit":100,"direction":1,"quote":"BTC","status":"create_status","account_name_or_id":"test2"}).then(function(subjects){
+            MarketGetSubjects({"start":1,"limit":100,"direction":1,"order_by":"vote_end_time","quote":"BTC","status":"create_status","account_name_or_id":"test2"}).then(function(subjects){
               console.log(subjects);
                 if (subjects) {
                   resolve()
@@ -137,9 +136,9 @@ describe("SubjectQuery functions test", () => {
         })
     })
 
-    it("My get subjects by vote end time", function(){
+    it("My get subjects", function(){
         return new Promise(function(resolve, reject){
-            MyGetSubjectsOrderByVoteEndTime({"start":1,"limit":100,"direction":1,"quote":"BTC","status":"create_status","account_name_or_id":"test2"}).then(function(subjects){
+            MyGetSubjects({"start":1,"limit":100,"direction":1,"order_by":"vote_end_time","quote":"BTC","status":"create_status","account_name_or_id":"test2"}).then(function(subjects){
               console.log(subjects);
                 if (subjects) {
                   resolve()

@@ -153,10 +153,9 @@ function GetSubjectEventsByOperator(startId, limit, operatorId) {
     });
 }
 
-function FrontPageGetSubjectsOrderByVoteEndTime(condition) {
+function FrontPageGetSubjects(condition) {
     return new Promise(function (resolve, reject) {
-        Apis.instance().db_api().exec("front_page_get_subjects_order_by_vote_end_time", [condition]).then(function (subjects) {
-            console.log(subjects);
+        Apis.instance().db_api().exec("front_page_get_subjects", [condition]).then(function (subjects) {
             if (subjects.length > 0) {
                 console.log(subjects);
                 console.log(subjects.length);
@@ -168,9 +167,9 @@ function FrontPageGetSubjectsOrderByVoteEndTime(condition) {
     });
 }
 
-function MarketGetSubjectsOrderByVoteEndTime(condition) {
+function MarketGetSubjects(condition) {
     return new Promise(function (resolve, reject) {
-        Apis.instance().db_api().exec("market_get_subjects_order_by_vote_end_time", [condition]).then(function (subjects) {
+        Apis.instance().db_api().exec("market_get_subjects", [condition]).then(function (subjects) {
             if (subjects.length > 0) {
                 console.log(subjects);
                 console.log(subjects.length);
@@ -182,9 +181,9 @@ function MarketGetSubjectsOrderByVoteEndTime(condition) {
     });
 }
 
-function MyGetSubjectsOrderByVoteEndTime(condition) {
+function MyGetSubjects(condition) {
     return new Promise(function (resolve, reject) {
-        Apis.instance().db_api().exec("my_get_subjects_order_by_vote_end_time", [condition]).then(function (subjects) {
+        Apis.instance().db_api().exec("my_get_subjects", [condition]).then(function (subjects) {
             if (subjects.length > 0) {
                 console.log(subjects);
                 console.log(subjects.length);
@@ -196,4 +195,4 @@ function MyGetSubjectsOrderByVoteEndTime(condition) {
     });
 }
 
-export { GetSubjectById, GetSubjectsByName, GetSubjectsOrderById, GetSubjectsByStatus, GetSubjectsByCreator, GetSubjectsByCreateTime, GetSubjectsByVoteEndTime, GetSubjectVotesByVoter, GetSubjectVotesBySubjectId, GetSubjectEventsBySubjectId, GetSubjectEventsByOperator, FrontPageGetSubjectsOrderByVoteEndTime, MarketGetSubjectsOrderByVoteEndTime, MyGetSubjectsOrderByVoteEndTime };
+export { GetSubjectById, GetSubjectsByName, GetSubjectsOrderById, GetSubjectsByStatus, GetSubjectsByCreator, GetSubjectsByCreateTime, GetSubjectsByVoteEndTime, GetSubjectVotesByVoter, GetSubjectVotesBySubjectId, GetSubjectEventsBySubjectId, GetSubjectEventsByOperator, FrontPageGetSubjects, MarketGetSubjects, MyGetSubjects };

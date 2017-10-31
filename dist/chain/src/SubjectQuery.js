@@ -1,7 +1,7 @@
 "use strict";
 
 exports.__esModule = true;
-exports.MyGetSubjectsOrderByVoteEndTime = exports.MarketGetSubjectsOrderByVoteEndTime = exports.FrontPageGetSubjectsOrderByVoteEndTime = exports.GetSubjectEventsByOperator = exports.GetSubjectEventsBySubjectId = exports.GetSubjectVotesBySubjectId = exports.GetSubjectVotesByVoter = exports.GetSubjectsByVoteEndTime = exports.GetSubjectsByCreateTime = exports.GetSubjectsByCreator = exports.GetSubjectsByStatus = exports.GetSubjectsOrderById = exports.GetSubjectsByName = exports.GetSubjectById = undefined;
+exports.MyGetSubjects = exports.MarketGetSubjects = exports.FrontPageGetSubjects = exports.GetSubjectEventsByOperator = exports.GetSubjectEventsBySubjectId = exports.GetSubjectVotesBySubjectId = exports.GetSubjectVotesByVoter = exports.GetSubjectsByVoteEndTime = exports.GetSubjectsByCreateTime = exports.GetSubjectsByCreator = exports.GetSubjectsByStatus = exports.GetSubjectsOrderById = exports.GetSubjectsByName = exports.GetSubjectById = undefined;
 
 var _fidchainjsWs = require("fidchainjs-ws");
 
@@ -158,10 +158,9 @@ function GetSubjectEventsByOperator(startId, limit, operatorId) {
     });
 }
 
-function FrontPageGetSubjectsOrderByVoteEndTime(condition) {
+function FrontPageGetSubjects(condition) {
     return new Promise(function (resolve, reject) {
-        _fidchainjsWs.Apis.instance().db_api().exec("front_page_get_subjects_order_by_vote_end_time", [condition]).then(function (subjects) {
-            console.log(subjects);
+        _fidchainjsWs.Apis.instance().db_api().exec("front_page_get_subjects", [condition]).then(function (subjects) {
             if (subjects.length > 0) {
                 console.log(subjects);
                 console.log(subjects.length);
@@ -173,9 +172,9 @@ function FrontPageGetSubjectsOrderByVoteEndTime(condition) {
     });
 }
 
-function MarketGetSubjectsOrderByVoteEndTime(condition) {
+function MarketGetSubjects(condition) {
     return new Promise(function (resolve, reject) {
-        _fidchainjsWs.Apis.instance().db_api().exec("market_get_subjects_order_by_vote_end_time", [condition]).then(function (subjects) {
+        _fidchainjsWs.Apis.instance().db_api().exec("market_get_subjects", [condition]).then(function (subjects) {
             if (subjects.length > 0) {
                 console.log(subjects);
                 console.log(subjects.length);
@@ -187,9 +186,9 @@ function MarketGetSubjectsOrderByVoteEndTime(condition) {
     });
 }
 
-function MyGetSubjectsOrderByVoteEndTime(condition) {
+function MyGetSubjects(condition) {
     return new Promise(function (resolve, reject) {
-        _fidchainjsWs.Apis.instance().db_api().exec("my_get_subjects_order_by_vote_end_time", [condition]).then(function (subjects) {
+        _fidchainjsWs.Apis.instance().db_api().exec("my_get_subjects", [condition]).then(function (subjects) {
             if (subjects.length > 0) {
                 console.log(subjects);
                 console.log(subjects.length);
@@ -212,6 +211,6 @@ exports.GetSubjectVotesByVoter = GetSubjectVotesByVoter;
 exports.GetSubjectVotesBySubjectId = GetSubjectVotesBySubjectId;
 exports.GetSubjectEventsBySubjectId = GetSubjectEventsBySubjectId;
 exports.GetSubjectEventsByOperator = GetSubjectEventsByOperator;
-exports.FrontPageGetSubjectsOrderByVoteEndTime = FrontPageGetSubjectsOrderByVoteEndTime;
-exports.MarketGetSubjectsOrderByVoteEndTime = MarketGetSubjectsOrderByVoteEndTime;
-exports.MyGetSubjectsOrderByVoteEndTime = MyGetSubjectsOrderByVoteEndTime;
+exports.FrontPageGetSubjects = FrontPageGetSubjects;
+exports.MarketGetSubjects = MarketGetSubjects;
+exports.MyGetSubjects = MyGetSubjects;
