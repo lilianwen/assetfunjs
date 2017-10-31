@@ -1,7 +1,7 @@
 "use strict";
 
 exports.__esModule = true;
-exports.GetSubjectEventsByOperator = exports.GetSubjectEventsBySubjectId = exports.GetSubjectVotesBySubjectId = exports.GetSubjectVotesByVoter = exports.GetSubjectsByVoteEndTime = exports.GetSubjectsByCreateTime = exports.GetSubjectsByCreator = exports.GetSubjectsByStatus = exports.GetSubjectsOrderById = exports.GetSubjectsByName = exports.GetSubjectById = undefined;
+exports.MyGetSubjectsOrderByVoteEndTime = exports.MarketGetSubjectsOrderByVoteEndTime = exports.FrontPageGetSubjectsOrderByVoteEndTime = exports.GetSubjectEventsByOperator = exports.GetSubjectEventsBySubjectId = exports.GetSubjectVotesBySubjectId = exports.GetSubjectVotesByVoter = exports.GetSubjectsByVoteEndTime = exports.GetSubjectsByCreateTime = exports.GetSubjectsByCreator = exports.GetSubjectsByStatus = exports.GetSubjectsOrderById = exports.GetSubjectsByName = exports.GetSubjectById = undefined;
 
 var _fidchainjsWs = require("fidchainjs-ws");
 
@@ -158,6 +158,49 @@ function GetSubjectEventsByOperator(startId, limit, operatorId) {
     });
 }
 
+function FrontPageGetSubjectsOrderByVoteEndTime(condition) {
+    return new Promise(function (resolve, reject) {
+        _fidchainjsWs.Apis.instance().db_api().exec("front_page_get_subjects_order_by_vote_end_time", [condition]).then(function (subjects) {
+            console.log(subjects);
+            if (subjects.length > 0) {
+                console.log(subjects);
+                console.log(subjects.length);
+                resolve(subjects);
+            } else {
+                reject(new Error("there is no subjects."));
+            }
+        });
+    });
+}
+
+function MarketGetSubjectsOrderByVoteEndTime(condition) {
+    return new Promise(function (resolve, reject) {
+        _fidchainjsWs.Apis.instance().db_api().exec("market_get_subjects_order_by_vote_end_time", [condition]).then(function (subjects) {
+            if (subjects.length > 0) {
+                console.log(subjects);
+                console.log(subjects.length);
+                resolve(subjects);
+            } else {
+                reject(new Error("there is no subjects."));
+            }
+        });
+    });
+}
+
+function MyGetSubjectsOrderByVoteEndTime(condition) {
+    return new Promise(function (resolve, reject) {
+        _fidchainjsWs.Apis.instance().db_api().exec("my_get_subjects_order_by_vote_end_time", [condition]).then(function (subjects) {
+            if (subjects.length > 0) {
+                console.log(subjects);
+                console.log(subjects.length);
+                resolve(subjects);
+            } else {
+                reject(new Error("there is no subjects."));
+            }
+        });
+    });
+}
+
 exports.GetSubjectById = GetSubjectById;
 exports.GetSubjectsByName = GetSubjectsByName;
 exports.GetSubjectsOrderById = GetSubjectsOrderById;
@@ -169,3 +212,6 @@ exports.GetSubjectVotesByVoter = GetSubjectVotesByVoter;
 exports.GetSubjectVotesBySubjectId = GetSubjectVotesBySubjectId;
 exports.GetSubjectEventsBySubjectId = GetSubjectEventsBySubjectId;
 exports.GetSubjectEventsByOperator = GetSubjectEventsByOperator;
+exports.FrontPageGetSubjectsOrderByVoteEndTime = FrontPageGetSubjectsOrderByVoteEndTime;
+exports.MarketGetSubjectsOrderByVoteEndTime = MarketGetSubjectsOrderByVoteEndTime;
+exports.MyGetSubjectsOrderByVoteEndTime = MyGetSubjectsOrderByVoteEndTime;

@@ -9,11 +9,11 @@ import EmitterInstance from "./src/EmitterInstance";
 import Login from "./src/AccountLogin";
 
 //[lilianwen add 2017-10-21]
-import { GetSubjectById, GetSubjectsByName, GetSubjectsOrderById, GetSubjectsByStatus, GetSubjectsByCreator, GetSubjectsByCreateTime, GetSubjectsByVoteEndTime, GetSubjectVotesByVoter, GetSubjectVotesBySubjectId, GetSubjectEventsBySubjectId, GetSubjectEventsByOperator } from "./src/SubjectQuery";
+import { GetSubjectById, GetSubjectsByName, GetSubjectsOrderById, GetSubjectsByStatus, GetSubjectsByCreator, GetSubjectsByCreateTime, GetSubjectsByVoteEndTime, GetSubjectVotesByVoter, GetSubjectVotesBySubjectId, GetSubjectEventsBySubjectId, GetSubjectEventsByOperator, FrontPageGetSubjectsOrderByVoteEndTime, MarketGetSubjectsOrderByVoteEndTime, MyGetSubjectsOrderByVoteEndTime } from "./src/SubjectQuery";
 //[end]
 
 var FetchChainObjects = ChainStore.FetchChainObjects,
     FetchChain = ChainStore.FetchChain;
 
 
-export { ChainStore, TransactionBuilder, FetchChainObjects, ChainTypes, ObjectId, NumberUtils, TransactionHelper, ChainValidation, FetchChain, Login, GetSubjectById, GetSubjectsByName, GetSubjectsOrderById, GetSubjectsByStatus, GetSubjectsByCreator, GetSubjectsByCreateTime, GetSubjectsByVoteEndTime, GetSubjectVotesByVoter, GetSubjectVotesBySubjectId, GetSubjectEventsBySubjectId, GetSubjectEventsByOperator };
+export { ChainStore, TransactionBuilder, FetchChainObjects, ChainTypes, ObjectId, NumberUtils, TransactionHelper, ChainValidation, FetchChain, Login, GetSubjectById, GetSubjectsByName, GetSubjectsOrderById, GetSubjectsByStatus, GetSubjectsByCreator, GetSubjectsByCreateTime, GetSubjectsByVoteEndTime, GetSubjectVotesByVoter, GetSubjectVotesBySubjectId, GetSubjectEventsBySubjectId, GetSubjectEventsByOperator, FrontPageGetSubjectsOrderByVoteEndTime, MarketGetSubjectsOrderByVoteEndTime, MyGetSubjectsOrderByVoteEndTime };

@@ -5,11 +5,14 @@ import {Apis, ChainConfig} from "fidchainjs-ws";
 import {GetSubjectById, GetSubjectsByName, GetSubjectsOrderById, 
     GetSubjectsByStatus, GetSubjectsByCreator, GetSubjectsByCreateTime, 
     GetSubjectsByVoteEndTime, GetSubjectVotesByVoter, GetSubjectVotesBySubjectId, 
-    GetSubjectEventsBySubjectId, GetSubjectEventsByOperator} from "../../lib"
+    GetSubjectEventsBySubjectId, GetSubjectEventsByOperator,
+    FrontPageGetSubjectsOrderByVoteEndTime,MarketGetSubjectsOrderByVoteEndTime,
+    MyGetSubjectsOrderByVoteEndTime } from "../../lib"
 
 describe("SubjectQuery functions test", () => {
 
-	let cs = "ws://106.15.202.130:11011";
+	//let cs = "ws://106.15.202.130:11011";
+  let cs = "ws://192.168.1.221:11011";
 	before(function() {
             return Apis.instance(cs, true).init_promise.then(function (result) {
                 console.log("conneted to ws://106.15.202.130:11011")
@@ -104,6 +107,45 @@ describe("SubjectQuery functions test", () => {
                 }else{
            			reject(Error("there is no subject named bitcoin_up_20006."))
            		}	
+           })
+        })
+    })
+    
+    it("Front page get subjects by vote end time", function(){
+        return new Promise(function(resolve, reject){
+            FrontPageGetSubjectsOrderByVoteEndTime({"start":1,"limit":100,"direction":1,"quote":"BTC","status":"create_status","account_name_or_id":"test2"}).then(function(subjects){
+              console.log(subjects);
+                if (subjects) {
+                  resolve()
+                }else{
+                reject(Error("there is no subjects."))
+              } 
+           })
+        })
+    })
+
+    it("Market get subjects by vote end time", function(){
+        return new Promise(function(resolve, reject){
+            MarketGetSubjectsOrderByVoteEndTime({"start":1,"limit":100,"direction":1,"quote":"BTC","status":"create_status","account_name_or_id":"test2"}).then(function(subjects){
+              console.log(subjects);
+                if (subjects) {
+                  resolve()
+                }else{
+                reject(Error("there is no subjects."))
+              } 
+           })
+        })
+    })
+
+    it("My get subjects by vote end time", function(){
+        return new Promise(function(resolve, reject){
+            MyGetSubjectsOrderByVoteEndTime({"start":1,"limit":100,"direction":1,"quote":"BTC","status":"create_status","account_name_or_id":"test2"}).then(function(subjects){
+              console.log(subjects);
+                if (subjects) {
+                  resolve()
+                }else{
+                reject(Error("there is no subjects."))
+              } 
            })
         })
     })
