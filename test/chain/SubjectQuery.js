@@ -112,7 +112,7 @@ describe("SubjectQuery functions test", () => {
     
     it("Front page get subjects", function(){
         return new Promise(function(resolve, reject){
-            FrontPageGetSubjects({"start":1,"limit":100,"direction":1,"order_by":"vote_end_time","quote":"BTC","status":"create_status","account_name_or_id":"test2"}).then(function(subjects){
+            FrontPageGetSubjects({"start":1,"limit":100,"start_time":"2017-11-02T12:00","end_time":"2017-12-10T12:00","direction":1,"order_by":"vote_end_time","quote":"BTC","status":"create_status","account_name_or_id":"test2"}).then(function(subjects){
               console.log(subjects);
                 if (subjects) {
                   resolve()
@@ -125,7 +125,7 @@ describe("SubjectQuery functions test", () => {
 
     it("Market get subjects by vote end time", function(){
         return new Promise(function(resolve, reject){
-            MarketGetSubjects({"start":1,"limit":100,"direction":1,"order_by":"vote_end_time","quote":"BTC","status":"create_status","account_name_or_id":"test2"}).then(function(subjects){
+            MarketGetSubjects({"start":1,"limit":100,"start_time":"2017-11-02T12:00","end_time":"2017-12-10T12:00","direction":1,"order_by":"vote_end_time","quote":"BTC","status":"create_status","account_name_or_id":"test2"}).then(function(subjects){
               console.log(subjects);
                 if (subjects) {
                   resolve()
@@ -138,7 +138,7 @@ describe("SubjectQuery functions test", () => {
 
     it("My get subjects", function(){
         return new Promise(function(resolve, reject){
-            MyGetSubjects({"start":1,"limit":100,"direction":1,"order_by":"vote_end_time","quote":"BTC","status":"create_status","account_name_or_id":"test2"}).then(function(subjects){
+            MyGetSubjects({"start":1,"limit":100,"start_time":"2017-11-02T12:00","end_time":"2017-12-10T12:00","direction":1,"order_by":"vote_end_time","quote":"BTC","status":"create_status","account_name_or_id":"test2"}).then(function(subjects){
               console.log(subjects);
                 if (subjects) {
                   resolve()
