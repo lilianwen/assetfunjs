@@ -1307,6 +1307,15 @@ var ChainStore = function () {
         return timeStringToDate(this.head_block_time_string);
     };
 
+    //[lilianwen add 2017-11-3]
+    // protogenetic block time, not Z
+
+
+    ChainStore.prototype.getHeadBlockDateEx = function getHeadBlockDateEx() {
+        return this.head_block_time_string;
+    };
+    //[end]
+
     ChainStore.prototype.getEstimatedChainTimeOffset = function getEstimatedChainTimeOffset() {
         if (this.chain_time_offset.length === 0) return 0;
         // Immutable is fast, sorts numbers correctly, and leaves the original unmodified
