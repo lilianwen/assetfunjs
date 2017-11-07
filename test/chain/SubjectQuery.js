@@ -10,8 +10,8 @@ import {GetSubjectById, GetSubjectsByName, GetSubjectsOrderById,
 
 describe("SubjectQuery functions test", () => {
 
-	//let cs = "ws://106.15.202.130:11011";
-  let cs = "ws://192.168.1.221:11011";
+	let cs = "ws://106.15.202.130:11013";
+  //let cs = "ws://192.168.1.221:11011";
 	before(function() {
             return Apis.instance(cs, true).init_promise.then(function (result) {
                 console.log("conneted to ws://106.15.202.130:11011")
@@ -125,7 +125,7 @@ describe("SubjectQuery functions test", () => {
 
     it("Market get subjects by vote end time", function(){
         return new Promise(function(resolve, reject){
-            MarketGetSubjects({"start":1,"limit":100,"start_time":"2017-11-02T12:00","end_time":"2017-12-10T12:00","direction":1,"order_by":"vote_end_time","quote":"BTC","status":"create_status","account_name_or_id":"test2"}).then(function(subjects){
+            MarketGetSubjects({"start":1,"limit":5,"start_time":"1970-01-01T00:00:00","end_time":"2017-11-03T11:12:27","direction":2,"order_by":"create_time","quote":"BTC","status":"all","account_name_or_id":"nathan"}).then(function(subjects){
               console.log(subjects);
                 if (subjects) {
                   resolve()

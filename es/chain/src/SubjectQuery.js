@@ -156,7 +156,7 @@ function GetSubjectEventsByOperator(startId, limit, operatorId) {
 function FrontPageGetSubjects(condition) {
     return new Promise(function (resolve, reject) {
         Apis.instance().db_api().exec("front_page_get_subjects", [condition]).then(function (subjects) {
-            if (subjects.length > 0) {
+            if (subjects.length >= 0) {
                 console.log(subjects);
                 console.log(subjects.length);
                 resolve(subjects);
@@ -170,7 +170,7 @@ function FrontPageGetSubjects(condition) {
 function MarketGetSubjects(condition) {
     return new Promise(function (resolve, reject) {
         Apis.instance().db_api().exec("market_get_subjects", [condition]).then(function (subjects) {
-            if (subjects.length > 0) {
+            if (subjects.length >= 0) {
                 console.log(subjects);
                 console.log(subjects.length);
                 resolve(subjects);
@@ -184,7 +184,7 @@ function MarketGetSubjects(condition) {
 function MyGetSubjects(condition) {
     return new Promise(function (resolve, reject) {
         Apis.instance().db_api().exec("my_get_subjects", [condition]).then(function (subjects) {
-            if (subjects.length > 0) {
+            if (subjects.length >= 0) {
                 console.log(subjects);
                 console.log(subjects.length);
                 resolve(subjects);
