@@ -702,12 +702,22 @@ export var subject_vote_template = new Serializer("subject_vote_template", {
     unit: price_unit
 });
 
+export var subject_vote_result = new Serializer("subject_vote_result", {
+    capital: asset,
+    reward: asset,
+    judge: uint32
+});
+
 export var subject_vote = new Serializer("subject_vote", {
     fee: asset,
     voter: protocol_id_type("account"),
     subject_id: protocol_id_type("subject"),
+    subject_name: string,
+    deferred_fee: int64,
+    vote_time: time_point_sec,
     template_vote: subject_vote_template,
-    vote_time: time_point_sec
+    vote_result: subject_vote_result
+
 });
 
 export var subject_event = new Serializer("subject_event", {

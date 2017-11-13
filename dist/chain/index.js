@@ -1,7 +1,7 @@
 "use strict";
 
 exports.__esModule = true;
-exports.MyGetSubjects = exports.MarketGetSubjects = exports.FrontPageGetSubjects = exports.GetSubjectEventsByOperator = exports.GetSubjectEventsBySubjectId = exports.GetSubjectVotesBySubjectId = exports.GetSubjectVotesByVoter = exports.GetSubjectsByVoteEndTime = exports.GetSubjectsByCreateTime = exports.GetSubjectsByCreator = exports.GetSubjectsByStatus = exports.GetSubjectsOrderById = exports.GetSubjectsByName = exports.GetSubjectById = exports.Login = exports.FetchChain = exports.ChainValidation = exports.TransactionHelper = exports.NumberUtils = exports.ObjectId = exports.ChainTypes = exports.FetchChainObjects = exports.TransactionBuilder = exports.ChainStore = undefined;
+exports.GetFeedPrice = exports.MyGetSubjects = exports.MarketGetSubjects = exports.FrontPageGetSubjects = exports.GetSubjectEventsByOperator = exports.GetSubjectEventsBySubjectId = exports.GetSubjectVotesBySubjectId = exports.GetSubjectVotesByVoter = exports.GetSubjectsByVoteEndTime = exports.GetSubjectsByCreateTime = exports.GetSubjectsByCreator = exports.GetSubjectsByStatus = exports.GetSubjectsOrderById = exports.GetSubjectsByName = exports.GetSubjectById = exports.Login = exports.FetchChain = exports.ChainValidation = exports.TransactionHelper = exports.NumberUtils = exports.ObjectId = exports.ChainTypes = exports.FetchChainObjects = exports.TransactionBuilder = exports.ChainStore = undefined;
 
 var _ChainStore = require("./src/ChainStore");
 
@@ -41,15 +41,15 @@ var _AccountLogin2 = _interopRequireDefault(_AccountLogin);
 
 var _SubjectQuery = require("./src/SubjectQuery");
 
+var _FeedPrice = require("./src/FeedPrice");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //[end]
 
+//[lilianwen add 2017-10-21]
 var FetchChainObjects = _ChainStore2.default.FetchChainObjects,
     FetchChain = _ChainStore2.default.FetchChain;
-
-//[lilianwen add 2017-10-21]
-
 exports.ChainStore = _ChainStore2.default;
 exports.TransactionBuilder = _TransactionBuilder2.default;
 exports.FetchChainObjects = FetchChainObjects;
@@ -74,3 +74,4 @@ exports.GetSubjectEventsByOperator = _SubjectQuery.GetSubjectEventsByOperator;
 exports.FrontPageGetSubjects = _SubjectQuery.FrontPageGetSubjects;
 exports.MarketGetSubjects = _SubjectQuery.MarketGetSubjects;
 exports.MyGetSubjects = _SubjectQuery.MyGetSubjects;
+exports.GetFeedPrice = _FeedPrice.GetFeedPrice;
