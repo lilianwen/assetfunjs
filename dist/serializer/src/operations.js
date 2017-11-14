@@ -726,12 +726,7 @@ var subject_vote = exports.subject_vote = new Serializer("subject_vote", {
     fee: asset,
     voter: protocol_id_type("account"),
     subject_id: protocol_id_type("subject"),
-    subject_name: string,
-    deferred_fee: int64,
-    vote_time: time_point_sec,
-    template_vote: subject_vote_template,
-    vote_result: subject_vote_result
-
+    template_vote: subject_vote_template
 });
 
 var subject_event = exports.subject_event = new Serializer("subject_event", {
