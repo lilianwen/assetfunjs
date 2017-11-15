@@ -712,7 +712,8 @@ var subject_publish = exports.subject_publish = new Serializer("subject_publish"
 
 var subject_vote_template = exports.subject_vote_template = new Serializer("subject_vote_template", {
     quantity: asset,
-    vote: string,
+    creator_vote: string,
+    my_vote: string,
     unit: price_unit
 });
 
