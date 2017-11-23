@@ -7,7 +7,7 @@ import th from './test_helper';
 
 import { is } from "immutable";
 import { PublicKey, PrivateKey, types } from "../../lib";
-import { ChainConfig } from "fidchainjs-ws";
+import { ChainConfig } from "assetfunjs-ws";
 
 describe("types", function() {
 

@@ -3,11 +3,11 @@
 exports.__esModule = true;
 exports.MyGetSubjects = exports.MarketGetSubjects = exports.FrontPageGetSubjects = exports.GetSubjectEventsByOperator = exports.GetSubjectEventsBySubjectId = exports.GetSubjectVotesBySubjectId = exports.GetSubjectVotesByVoter = exports.GetSubjectsByVoteEndTime = exports.GetSubjectsByCreateTime = exports.GetSubjectsByCreator = exports.GetSubjectsByStatus = exports.GetSubjectsOrderById = exports.GetSubjectsByName = exports.GetSubjectById = undefined;
 
-var _fidchainjsWs = require("fidchainjs-ws");
+var _assetfunjsWs = require("assetfunjs-ws");
 
 function GetSubjectById(Id) {
     return new Promise(function (resolve, reject) {
-        _fidchainjsWs.Apis.instance().db_api().exec("get_subject_by_id", [Id]).then(function (subjects) {
+        _assetfunjsWs.Apis.instance().db_api().exec("get_subject_by_id", [Id]).then(function (subjects) {
             if (subjects) {
                 console.log(subjects);
                 resolve(subjects);
@@ -20,7 +20,7 @@ function GetSubjectById(Id) {
 
 function GetSubjectsByName(startId, limit, name) {
     return new Promise(function (resolve, reject) {
-        _fidchainjsWs.Apis.instance().db_api().exec("get_subjects_by_name", [startId, limit, name]).then(function (subjects) {
+        _assetfunjsWs.Apis.instance().db_api().exec("get_subjects_by_name", [startId, limit, name]).then(function (subjects) {
             if (subjects.length > 0) {
                 console.log(subjects);
                 console.log(subjects.length);
@@ -34,7 +34,7 @@ function GetSubjectsByName(startId, limit, name) {
 
 function GetSubjectsOrderById(startId, limit) {
     return new Promise(function (resolve, reject) {
-        _fidchainjsWs.Apis.instance().db_api().exec("get_subjects_order_by_id", [startId, limit]).then(function (subjects) {
+        _assetfunjsWs.Apis.instance().db_api().exec("get_subjects_order_by_id", [startId, limit]).then(function (subjects) {
             if (subjects.length > 0) {
                 console.log(subjects);
                 console.log(subjects.length);
@@ -47,7 +47,7 @@ function GetSubjectsOrderById(startId, limit) {
 }
 function GetSubjectsByStatus(startId, limit, status) {
     return new Promise(function (resolve, reject) {
-        _fidchainjsWs.Apis.instance().db_api().exec("get_subjects_by_status", [startId, limit, status]).then(function (subjects) {
+        _assetfunjsWs.Apis.instance().db_api().exec("get_subjects_by_status", [startId, limit, status]).then(function (subjects) {
             if (subjects.length > 0) {
                 console.log(subjects);
                 console.log(subjects.length);
@@ -61,7 +61,7 @@ function GetSubjectsByStatus(startId, limit, status) {
 
 function GetSubjectsByCreator(startId, limit, creatorNameOrId) {
     return new Promise(function (resolve, reject) {
-        _fidchainjsWs.Apis.instance().db_api().exec("get_subjects_by_creator", [startId, limit, creatorNameOrId]).then(function (subjects) {
+        _assetfunjsWs.Apis.instance().db_api().exec("get_subjects_by_creator", [startId, limit, creatorNameOrId]).then(function (subjects) {
             if (subjects.length > 0) {
                 console.log(subjects);
                 console.log(subjects.length);
@@ -75,7 +75,7 @@ function GetSubjectsByCreator(startId, limit, creatorNameOrId) {
 
 function GetSubjectsByCreateTime(startId, limit, startTime, endTime) {
     return new Promise(function (resolve, reject) {
-        _fidchainjsWs.Apis.instance().db_api().exec("get_subjects_by_creator_time", [startId, limit, startTime, endTime]).then(function (subjects) {
+        _assetfunjsWs.Apis.instance().db_api().exec("get_subjects_by_creator_time", [startId, limit, startTime, endTime]).then(function (subjects) {
             if (subjects.length > 0) {
                 console.log(subjects);
                 console.log(subjects.length);
@@ -89,7 +89,7 @@ function GetSubjectsByCreateTime(startId, limit, startTime, endTime) {
 
 function GetSubjectsByVoteEndTime(startId, limit, startTime, endTime) {
     return new Promise(function (resolve, reject) {
-        _fidchainjsWs.Apis.instance().db_api().exec("get_subjects_by_vote_end_time", [startId, limit, startTime, endTime]).then(function (subjects) {
+        _assetfunjsWs.Apis.instance().db_api().exec("get_subjects_by_vote_end_time", [startId, limit, startTime, endTime]).then(function (subjects) {
             if (subjects.length > 0) {
                 console.log(subjects);
                 console.log(subjects.length);
@@ -104,7 +104,7 @@ function GetSubjectsByVoteEndTime(startId, limit, startTime, endTime) {
 //not tested
 function GetSubjectVotesByVoter(startId, limit, voter) {
     return new Promise(function (resolve, reject) {
-        _fidchainjsWs.Apis.instance().db_api().exec("get_subject_votes_by_voter", [startId, limit, voter]).then(function (subjectVotes) {
+        _assetfunjsWs.Apis.instance().db_api().exec("get_subject_votes_by_voter", [startId, limit, voter]).then(function (subjectVotes) {
             if (subjectVotes.length > 0) {
                 console.log(subjectVotes);
                 console.log(subjectVotes.length);
@@ -118,7 +118,7 @@ function GetSubjectVotesByVoter(startId, limit, voter) {
 
 function GetSubjectVotesBySubjectId(startId, limit, subjectId) {
     return new Promise(function (resolve, reject) {
-        _fidchainjsWs.Apis.instance().db_api().exec("get_subject_votes_by_subject_id", [startId, limit, subjectId]).then(function (subjectVotes) {
+        _assetfunjsWs.Apis.instance().db_api().exec("get_subject_votes_by_subject_id", [startId, limit, subjectId]).then(function (subjectVotes) {
             if (subjectVotes.length > 0) {
                 console.log(subjectVotes);
                 console.log(subjectVotes.length);
@@ -132,7 +132,7 @@ function GetSubjectVotesBySubjectId(startId, limit, subjectId) {
 
 function GetSubjectEventsBySubjectId(startId, limit, subjectId) {
     return new Promise(function (resolve, reject) {
-        _fidchainjsWs.Apis.instance().db_api().exec("get_subject_votes_by_subject_id", [startId, limit, subjectId]).then(function (subjectEvents) {
+        _assetfunjsWs.Apis.instance().db_api().exec("get_subject_votes_by_subject_id", [startId, limit, subjectId]).then(function (subjectEvents) {
             if (subjectEvents.length > 0) {
                 console.log(subjectEvents);
                 console.log(subjectEvents.length);
@@ -146,7 +146,7 @@ function GetSubjectEventsBySubjectId(startId, limit, subjectId) {
 
 function GetSubjectEventsByOperator(startId, limit, operatorId) {
     return new Promise(function (resolve, reject) {
-        _fidchainjsWs.Apis.instance().db_api().exec("get_subject_events_by_operator", [startId, limit, operatorId]).then(function (subjectEvents) {
+        _assetfunjsWs.Apis.instance().db_api().exec("get_subject_events_by_operator", [startId, limit, operatorId]).then(function (subjectEvents) {
             if (subjectEvents.length > 0) {
                 console.log(subjectEvents);
                 console.log(subjectEvents.length);
@@ -160,7 +160,7 @@ function GetSubjectEventsByOperator(startId, limit, operatorId) {
 
 function FrontPageGetSubjects(condition) {
     return new Promise(function (resolve, reject) {
-        _fidchainjsWs.Apis.instance().db_api().exec("front_page_get_subjects", [condition]).then(function (subjects) {
+        _assetfunjsWs.Apis.instance().db_api().exec("front_page_get_subjects", [condition]).then(function (subjects) {
             if (subjects.length >= 0) {
                 console.log(subjects);
                 console.log(subjects.length);
@@ -174,7 +174,7 @@ function FrontPageGetSubjects(condition) {
 
 function MarketGetSubjects(condition) {
     return new Promise(function (resolve, reject) {
-        _fidchainjsWs.Apis.instance().db_api().exec("market_get_subjects", [condition]).then(function (subjects) {
+        _assetfunjsWs.Apis.instance().db_api().exec("market_get_subjects", [condition]).then(function (subjects) {
             if (subjects.length >= 0) {
                 console.log(subjects);
                 console.log(subjects.length);
@@ -188,7 +188,7 @@ function MarketGetSubjects(condition) {
 
 function MyGetSubjects(condition) {
     return new Promise(function (resolve, reject) {
-        _fidchainjsWs.Apis.instance().db_api().exec("my_get_subjects", [condition]).then(function (subjects) {
+        _assetfunjsWs.Apis.instance().db_api().exec("my_get_subjects", [condition]).then(function (subjects) {
             if (subjects.length >= 0) {
                 console.log(subjects);
                 console.log(subjects.length);

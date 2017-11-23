@@ -2,7 +2,7 @@
 
 exports.__esModule = true;
 
-var _fidchainjsWs = require("fidchainjs-ws");
+var _assetfunjsWs = require("assetfunjs-ws");
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //@brief 从区块链见证人节点获取某个时间某个网站某个交易对的喂价
@@ -16,7 +16,7 @@ var _fidchainjsWs = require("fidchainjs-ws");
 
 function GetFeedPrice(coin_name, base, time) {
     return new Promise(function (resolve, reject) {
-        _fidchainjsWs.Apis.instance().db_api().exec("get_coin_price", [coin_name, base, time]).then(function (price) {
+        _assetfunjsWs.Apis.instance().db_api().exec("get_coin_price", [coin_name, base, time]).then(function (price) {
             if (price) {
                 console.log(price);
                 resolve(price);

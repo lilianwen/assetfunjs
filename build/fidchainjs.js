@@ -8,9 +8,9 @@ module.exports = {
     key: require("./ecc/src/KeyUtils"),
     TransactionBuilder: require("./chain/src/TransactionBuilder"),
     Login: require("./chain/src/AccountLogin"),
-    bitshares_ws: require("fidchainjs-ws")
+    bitshares_ws: require("assetfunjs-ws")
 };
-},{"./chain/src/AccountLogin":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/chain/src/AccountLogin.js","./chain/src/TransactionBuilder":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/chain/src/TransactionBuilder.js","./ecc/src/KeyUtils":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/KeyUtils.js","./ecc/src/PrivateKey":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/PrivateKey.js","./ecc/src/PublicKey":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/PublicKey.js","./ecc/src/signature":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/signature.js","fidchainjs-ws":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/fidchainjs-ws/cjs/index.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/dist/chain/src/AccountLogin.js":[function(require,module,exports){
+},{"./chain/src/AccountLogin":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/chain/src/AccountLogin.js","./chain/src/TransactionBuilder":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/chain/src/TransactionBuilder.js","./ecc/src/KeyUtils":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/KeyUtils.js","./ecc/src/PrivateKey":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/PrivateKey.js","./ecc/src/PublicKey":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/PublicKey.js","./ecc/src/signature":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/signature.js","assetfunjs-ws":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assetfunjs-ws/cjs/index.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/dist/chain/src/AccountLogin.js":[function(require,module,exports){
 "use strict";
 
 exports.__esModule = true;
@@ -327,7 +327,7 @@ var _ecc = require("../../ecc");
 
 var _serializer = require("../../serializer");
 
-var _bitsharesjsWs = require("fidchainjs-ws");
+var _bitsharesjsWs = require("assetfunjs-ws");
 
 var _ChainTypes = require("./ChainTypes");
 
@@ -939,7 +939,7 @@ exports.default = TransactionBuilder;
 module.exports = exports["default"];
 }).call(this,require("buffer").Buffer)
 
-},{"../../ecc":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/index.js","../../serializer":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/serializer/index.js","./ChainTypes":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/chain/src/ChainTypes.js","assert":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assert/assert.js","fidchainjs-ws":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/fidchainjs-ws/cjs/index.js","buffer":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/buffer/index.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/dist/chain/src/state.js":[function(require,module,exports){
+},{"../../ecc":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/index.js","../../serializer":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/serializer/index.js","./ChainTypes":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/chain/src/ChainTypes.js","assert":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assert/assert.js","assetfunjs-ws":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assetfunjs-ws/cjs/index.js","buffer":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/buffer/index.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/dist/chain/src/state.js":[function(require,module,exports){
 "use strict";
 
 exports.__esModule = true;
@@ -1049,7 +1049,7 @@ var _secureRandom = require('secure-random');
 
 var _secureRandom2 = _interopRequireDefault(_secureRandom);
 
-var _bitsharesjsWs = require('fidchainjs-ws');
+var _bitsharesjsWs = require('assetfunjs-ws');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1242,7 +1242,7 @@ exports.default = key;
 module.exports = exports['default'];
 }).call(this,require("buffer").Buffer)
 
-},{"./PrivateKey":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/PrivateKey.js","./PublicKey":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/PublicKey.js","./address":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/address.js","./aes":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/aes.js","./hash":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/hash.js","fidchainjs-ws":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/fidchainjs-ws/cjs/index.js","buffer":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/buffer/index.js","secure-random":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/secure-random/lib/secure-random.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/PrivateKey.js":[function(require,module,exports){
+},{"./PrivateKey":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/PrivateKey.js","./PublicKey":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/PublicKey.js","./address":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/address.js","./aes":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/aes.js","./hash":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/hash.js","assetfunjs-ws":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assetfunjs-ws/cjs/index.js","buffer":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/buffer/index.js","secure-random":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/secure-random/lib/secure-random.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/PrivateKey.js":[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -1470,7 +1470,7 @@ var _bs = require('bs58');
 
 var _hash = require('./hash');
 
-var _bitsharesjsWs = require('fidchainjs-ws');
+var _bitsharesjsWs = require('assetfunjs-ws');
 
 var _assert = require('assert');
 
@@ -1558,7 +1558,7 @@ var PublicKey = function () {
 
     /**
         @arg {string} public_key - like FIDXyz...
-        @arg {string} address_prefix - like FID
+        @arg {string} address_prefix - like AFT
         @return PublicKey or `null` (if the public_key string is invalid)
     */
 
@@ -1575,7 +1575,7 @@ var PublicKey = function () {
 
     /**
         @arg {string} public_key - like FIDXyz...
-        @arg {string} address_prefix - like FID
+        @arg {string} address_prefix - like AFT
         @throws {Error} if public key is invalid
         @return PublicKey
     */
@@ -1674,7 +1674,7 @@ exports.default = PublicKey;
 module.exports = exports['default'];
 }).call(this,require("buffer").Buffer)
 
-},{"./hash":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/hash.js","assert":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assert/assert.js","bigi":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/bigi/lib/index.js","fidchainjs-ws":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/fidchainjs-ws/cjs/index.js","bs58":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/bs58/index.js","buffer":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/buffer/index.js","deep-equal":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/deep-equal/index.js","ecurve":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/ecurve/lib/index.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/address.js":[function(require,module,exports){
+},{"./hash":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/hash.js","assert":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assert/assert.js","bigi":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/bigi/lib/index.js","assetfunjs-ws":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assetfunjs-ws/cjs/index.js","bs58":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/bs58/index.js","buffer":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/buffer/index.js","deep-equal":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/deep-equal/index.js","ecurve":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/ecurve/lib/index.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/address.js":[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -1684,7 +1684,7 @@ var _assert = require('assert');
 
 var _assert2 = _interopRequireDefault(_assert);
 
-var _bitsharesjsWs = require('fidchainjs-ws');
+var _bitsharesjsWs = require('assetfunjs-ws');
 
 var _hash2 = require('./hash');
 
@@ -1767,7 +1767,7 @@ exports.default = Address;
 module.exports = exports['default'];
 }).call(this,require("buffer").Buffer)
 
-},{"./hash":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/hash.js","assert":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assert/assert.js","fidchainjs-ws":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/fidchainjs-ws/cjs/index.js","bs58":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/bs58/index.js","buffer":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/buffer/index.js","deep-equal":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/deep-equal/index.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/aes.js":[function(require,module,exports){
+},{"./hash":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/hash.js","assert":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assert/assert.js","assetfunjs-ws":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assetfunjs-ws/cjs/index.js","bs58":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/bs58/index.js","buffer":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/buffer/index.js","deep-equal":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/deep-equal/index.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/src/aes.js":[function(require,module,exports){
 (function (Buffer){
 "use strict";
 
@@ -4164,7 +4164,7 @@ var _ObjectId2 = _interopRequireDefault(_ObjectId);
 
 var _ecc = require('../../ecc');
 
-var _bitsharesjsWs = require('fidchainjs-ws');
+var _bitsharesjsWs = require('assetfunjs-ws');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -5042,7 +5042,7 @@ exports.default = Types;
 module.exports = exports['default'];
 }).call(this,require('_process'),require("buffer").Buffer)
 
-},{"../../chain/src/ChainTypes":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/chain/src/ChainTypes.js","../../chain/src/ObjectId":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/chain/src/ObjectId.js","../../ecc":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/index.js","./FastParser":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/serializer/src/FastParser.js","./SerializerValidation":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/serializer/src/SerializerValidation.js","_process":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/process/browser.js","fidchainjs-ws":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/fidchainjs-ws/cjs/index.js","buffer":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/buffer/index.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/ReconnectingWebSocket/reconnecting-websocket.js":[function(require,module,exports){
+},{"../../chain/src/ChainTypes":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/chain/src/ChainTypes.js","../../chain/src/ObjectId":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/chain/src/ObjectId.js","../../ecc":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/ecc/index.js","./FastParser":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/serializer/src/FastParser.js","./SerializerValidation":"/home/sigve/Dev/Bitshares/bitsharesjs/dist/serializer/src/SerializerValidation.js","_process":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/process/browser.js","assetfunjs-ws":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assetfunjs-ws/cjs/index.js","buffer":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/buffer/index.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/ReconnectingWebSocket/reconnecting-websocket.js":[function(require,module,exports){
 // MIT License:
 //
 // Copyright (c) 2010-2012, Joe Walnes
@@ -7862,7 +7862,7 @@ module.exports={
   "version": "1.4.2"
 }
 
-},{}],"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/fidchainjs-ws/cjs/index.js":[function(require,module,exports){
+},{}],"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assetfunjs-ws/cjs/index.js":[function(require,module,exports){
 "use strict";
 
 exports.__esModule = true;
@@ -7885,7 +7885,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.Apis = _ApiInstances2.default;
 exports.ChainConfig = _ChainConfig2.default;
 exports.Manager = _ConnectionManager2.default;
-},{"./src/ApiInstances":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/fidchainjs-ws/cjs/src/ApiInstances.js","./src/ChainConfig":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/fidchainjs-ws/cjs/src/ChainConfig.js","./src/ConnectionManager":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/fidchainjs-ws/cjs/src/ConnectionManager.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/fidchainjs-ws/cjs/src/ApiInstances.js":[function(require,module,exports){
+},{"./src/ApiInstances":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assetfunjs-ws/cjs/src/ApiInstances.js","./src/ChainConfig":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assetfunjs-ws/cjs/src/ChainConfig.js","./src/ConnectionManager":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assetfunjs-ws/cjs/src/ConnectionManager.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assetfunjs-ws/cjs/src/ApiInstances.js":[function(require,module,exports){
 "use strict";
 
 exports.__esModule = true;
@@ -8060,7 +8060,7 @@ var ApisInstance = function () {
 }();
 
 module.exports = exports["default"];
-},{"./ChainConfig":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/fidchainjs-ws/cjs/src/ChainConfig.js","./ChainWebSocket":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/fidchainjs-ws/cjs/src/ChainWebSocket.js","./GrapheneApi":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/fidchainjs-ws/cjs/src/GrapheneApi.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/fidchainjs-ws/cjs/src/ChainConfig.js":[function(require,module,exports){
+},{"./ChainConfig":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assetfunjs-ws/cjs/src/ChainConfig.js","./ChainWebSocket":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assetfunjs-ws/cjs/src/ChainWebSocket.js","./GrapheneApi":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assetfunjs-ws/cjs/src/GrapheneApi.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assetfunjs-ws/cjs/src/ChainConfig.js":[function(require,module,exports){
 (function (process){
 "use strict";
 
@@ -8068,19 +8068,19 @@ exports.__esModule = true;
 var _this = void 0;
 
 var ecc_config = {
-    address_prefix: process.env.npm_config__graphene_ecc_default_address_prefix || "FID"
+    address_prefix: process.env.npm_config__graphene_ecc_default_address_prefix || "AFT"
 };
 
 _this = {
     core_asset: "CORE",
-    address_prefix: "FID",
+    address_prefix: "AFT",
     expire_in_secs: 15,
     expire_in_secs_proposal: 24 * 60 * 60,
     review_in_secs_committee: 24 * 60 * 60,
     networks: {
         BitShares: {
-            core_asset: "FID",
-            address_prefix: "FID",
+            core_asset: "AFT",
+            address_prefix: "AFT",
             chain_id: "336ff5b282c25e0fbf6daf18d7698c8936c5aee332dd39ea36c8de54f73a0378"
         }
     },
@@ -8125,8 +8125,8 @@ _this = {
 
     reset: function reset() {
         _this.core_asset = "CORE";
-        _this.address_prefix = "FID";
-        ecc_config.address_prefix = "FID";
+        _this.address_prefix = "AFT";
+        ecc_config.address_prefix = "AFT";
         _this.expire_in_secs = 15;
         _this.expire_in_secs_proposal = 24 * 60 * 60;
 
@@ -8134,7 +8134,7 @@ _this = {
     },
 
     setPrefix: function setPrefix() {
-        var prefix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "FID";
+        var prefix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "AFT";
 
         _this.address_prefix = prefix;
         ecc_config.address_prefix = prefix;
@@ -8145,7 +8145,7 @@ exports.default = _this;
 module.exports = exports["default"];
 }).call(this,require('_process'))
 
-},{"_process":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/process/browser.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/fidchainjs-ws/cjs/src/ChainWebSocket.js":[function(require,module,exports){
+},{"_process":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/process/browser.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assetfunjs-ws/cjs/src/ChainWebSocket.js":[function(require,module,exports){
 (function (process){
 "use strict";
 
@@ -8323,7 +8323,7 @@ exports.default = ChainWebSocket;
 module.exports = exports["default"];
 }).call(this,require('_process'))
 
-},{"ReconnectingWebSocket":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/ReconnectingWebSocket/reconnecting-websocket.js","_process":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/process/browser.js","ws":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/browser-resolve/empty.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/fidchainjs-ws/cjs/src/ConnectionManager.js":[function(require,module,exports){
+},{"ReconnectingWebSocket":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/ReconnectingWebSocket/reconnecting-websocket.js","_process":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/process/browser.js","ws":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/browser-resolve/empty.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assetfunjs-ws/cjs/src/ConnectionManager.js":[function(require,module,exports){
 "use strict";
 
 exports.__esModule = true;
@@ -8462,7 +8462,7 @@ var Manager = function () {
 
 exports.default = Manager;
 module.exports = exports["default"];
-},{"./ApiInstances":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/fidchainjs-ws/cjs/src/ApiInstances.js","./ChainWebSocket":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/fidchainjs-ws/cjs/src/ChainWebSocket.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/fidchainjs-ws/cjs/src/GrapheneApi.js":[function(require,module,exports){
+},{"./ApiInstances":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assetfunjs-ws/cjs/src/ApiInstances.js","./ChainWebSocket":"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assetfunjs-ws/cjs/src/ChainWebSocket.js"}],"/home/sigve/Dev/Bitshares/bitsharesjs/node_modules/assetfunjs-ws/cjs/src/GrapheneApi.js":[function(require,module,exports){
 "use strict";
 
 exports.__esModule = true;

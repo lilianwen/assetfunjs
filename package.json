@@ -1,5 +1,5 @@
 {
-  "name": "fidchainjs",
+  "name": "assetfunjs",
   "version": "1.2.4",
   "description": "Pure JavaScript Bitshares library for node.js and browsers.",
   "browser": {
@@ -19,8 +19,8 @@
     "postbuild": "npm run build-es",
     "build:watch": "babel lib -d dist --watch",
     "prebrowserify": "rm -rf ./build/*",
-    "browserify": "browserify --full-paths dist/browser.js --standalone bitshares_js -o build/fidchainjs.js -d",
-    "postbrowserify": "uglifyjs --compress --mangle --sequences --drop_console --output build/fidchainjs.min.js -- build/fidchainjs.js",
+    "browserify": "browserify --full-paths dist/browser.js --standalone bitshares_js -o build/assetfunjs.js -d",
+    "postbrowserify": "uglifyjs --compress --mangle --sequences --drop_console --output build/assetfunjs.min.js -- build/assetfunjs.js",
     "prepublish": "npm run build",
     "doc": "esdoc -c esdoc.json",
     "example:transfer": "babel-node examples/transfer",
@@ -29,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lilianwen/fidchainjs.git"
+    "url": "git+https://github.com/lilianwen/assetfunjs.git"
   },
   "author": "Sigve Kvalsvik <bitsharesblocks@gmail.com> (https://github.com/svk31)",
   "contributors": [
@@ -39,7 +39,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lilianwen/fidchainjs/issues"
+    "url": "https://github.com/lilianwen/assetfunjs/issues"
   },
   "engines": {
     "node": ">= 6.0.0"
@@ -51,7 +51,7 @@
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-stage-1": "^6.16.0",
     "bigi": "^1.4.1",
-    "fidchainjs-ws": "git+https://github.com/lilianwen/fidchainjs-ws.git",
+    "assetfunjs-ws": "git+https://github.com/lilianwen/assetfunjs-ws.git",
     "bs58": "^3.0.0",
     "bytebuffer": "^5.0.0",
     "create-hash": "^1.1.2",
@@ -72,6 +72,6 @@
     "esdoc": "^0.4.3",
     "eslint": "^3.14.1",
     "mocha": "^3.2.0",
-    "uglifyjs": "^2.4.10"
+    "uglify-js": "^3.1.10"
   }
 }

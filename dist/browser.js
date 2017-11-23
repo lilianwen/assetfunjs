@@ -8,5 +8,5 @@ module.exports = {
     TransactionBuilder: require("./chain/src/TransactionBuilder"),
     Login: require("./chain/src/AccountLogin"),
     SubjectQuery: require("./chain/src/SubjectQuery"),
-    fidchain_ws: require("fidchainjs-ws")
+    assetfun_ws: require("assetfunjs-ws")
 };

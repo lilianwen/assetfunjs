@@ -1,6 +1,6 @@
 import assert from "assert";
 //import SubjectQuery from "../../lib";
-import {Apis, ChainConfig} from "fidchainjs-ws";
+import {Apis, ChainConfig} from "assetfunjs-ws";
 //import {GetSubjectsByName} from "../../lib/chain/src/SubjectQuery"
 import { GetFeedPrice } from "../../lib"
 

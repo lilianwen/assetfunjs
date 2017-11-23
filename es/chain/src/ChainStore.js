@@ -3,7 +3,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 import Immutable from "immutable";
-import { Apis } from "fidchainjs-ws";
+import { Apis } from "assetfunjs-ws";
 import ChainTypes from "./ChainTypes";
 import ChainValidation from "./ChainValidation";
 import BigInteger from "bigi";

@@ -1,4 +1,4 @@
-import { Apis } from "fidchainjs-ws";
+import { Apis } from "assetfunjs-ws";
 
 function GetSubjectById(Id) {
     return new Promise(function (resolve, reject) {

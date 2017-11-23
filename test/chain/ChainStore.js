@@ -1,5 +1,5 @@
 import assert from "assert";
-import {Apis, ChainConfig} from "fidchainjs-ws";
+import {Apis, ChainConfig} from "assetfunjs-ws";
 import { FetchChain, ChainStore } from "../../lib";
 
 var coreAsset;

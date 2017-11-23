@@ -5,7 +5,7 @@ import { Point, getCurveByName } from 'ecurve';
 var secp256k1 = getCurveByName('secp256k1');
 import { encode, decode } from 'bs58';
 import { sha256, sha512, ripemd160 } from './hash';
-import { ChainConfig } from 'fidchainjs-ws';
+import { ChainConfig } from 'assetfunjs-ws';
 import assert from "assert";
 import deepEqual from "deep-equal";
 
@@ -82,7 +82,7 @@ var PublicKey = function () {
 
     /**
         @arg {string} public_key - like FIDXyz...
-        @arg {string} address_prefix - like FID
+        @arg {string} address_prefix - like AFT
         @return PublicKey or `null` (if the public_key string is invalid)
     */
 
@@ -99,7 +99,7 @@ var PublicKey = function () {
 
     /**
         @arg {string} public_key - like FIDXyz...
-        @arg {string} address_prefix - like FID
+        @arg {string} address_prefix - like AFT
         @throws {Error} if public key is invalid
         @return PublicKey
     */
