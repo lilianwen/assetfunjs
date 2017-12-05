@@ -202,7 +202,7 @@ function MyGetSubjects(condition) {
 
 function GetMyCreateSubjects(condition) {
     return new Promise(function (resolve, reject) {
-        _assetfunjsWs.Apis.instance().db_api().exec("my_get_subjects", [condition]).then(function (subjects) {
+        _assetfunjsWs.Apis.instance().db_api().exec("get_my_create_subjects", [condition]).then(function (subjects) {
             if (subjects.length >= 0) {
                 console.log(subjects);
                 console.log(subjects.length);
